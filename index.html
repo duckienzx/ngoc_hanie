@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HANIETAYBE - Content Creator tại TP. Hồ Chí Minh, Việt Nam. Kết nối với mình qua Discord, Facebook, Instagram, TikTok và YouTube!">
+    <meta property="og:title" content="HANIETAYBE | Bio Link">
+    <meta property="og:description" content="Trang liên kết chính thức của HANIETAYBE - Content Creator.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80">
+    <title>HANIETAYBE | Bio Link & Donate</title>
+    <link rel="icon" href="ngoc.jpg" type="image/jpeg">
+
+    <!-- Google Fonts: Outfit & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Video làm hình nền (Background Video) -->
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="moi.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Nút chuyển đổi Light / Dark Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox" aria-label="Chuyển đổi giao diện sáng tối">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+
+    <!-- Container chính -->
+    <main class="profile-container">
+        <!-- Khu vực Avatar & Giới thiệu -->
+        <header class="profile-header">
+            <div class="avatar-wrapper">
+                <!-- Bạn có thể thay thế đường dẫn ảnh dưới đây bằng ảnh local của bạn, ví dụ: src="avatar.png" -->
+                <img class="profile-avatar" id="profile-avatar" src="ngoc.jpg" alt="Avatar HANIETAYBE">
+                <div class="avatar-glow"></div>
+            </div>
+
+            <h1 class="profile-name">HANIETAYBE</h1>
+
+            <div class="profile-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> HCMCity, Vietnam</span>
+                <span class="meta-tag">CONTENT CREATOR</span>
+            </div>
+        </header>
+
+        <!-- Các icon Mạng Xã Hội -->
+        <section class="social-links-container">
+            <a href="#" class="social-icon-btn" id="email-trigger" aria-label="Email" title="Xem Email">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a href="https://www.tiktok.com/@hanietaybe" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="TikTok" title="TikTok HANIETAYBE">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/hanietaybe" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="Instagram" title="Instagram HANIETAYBE">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@hanietaybe" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="Facebook" title="Facebook HANIETAYBE">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@hanietaybe" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="YouTube" title="YouTube HANIETAYBE">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hanietaybe" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="LinkedIn" title="LinkedIn HANIETAYBE">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </section>
+
+        <!-- Nút Discord Team -->
+        <section class="cta-section animate-item">
+            <a href="https://discord.com/invite/WMZ3WQGs3M" target="_blank" rel="noopener" class="discord-button">
+                <i class="fab fa-discord discord-icon-spin"></i>
+                <span>Discord team Hanie</span>
+                <div class="button-shine"></div>
+            </a>
+        </section>
+
+        <!-- Bảng thông tin Quyên góp / Donate -->
+        <section class="donate-section animate-item">
+            <h2 class="donate-title">DONATE AT HERE ^^ THANK YOU</h2>
+
+            <div class="donate-card">
+                <!-- Tên chủ tài khoản -->
+                <div class="account-owner">TRAN HONG NGOC</div>
+
+                <!-- Số tài khoản & nút copy -->
+                <div class="account-number-box" id="copy-bank-btn" title="Nhấp vào để sao chép số tài khoản">
+                    <span class="bank-number" id="bank-number">1903 7152 7390 11</span>
+                    <button class="copy-action-btn" aria-label="Sao chép số tài khoản">
+                        <i class="far fa-copy" id="copy-icon"></i>
+                    </button>
+                    <span class="tooltip" id="copy-tooltip">Nhấp để copy</span>
+                </div>
+
+                <!-- Khu vực hiển thị QR Code -->
+                <div class="qr-code-wrapper">
+                    <!-- API VietQR tạo mã QR chuẩn Napas247 của Techcombank -->
+                    <img class="qr-image"
+                        src="https://img.vietqr.io/image/techcombank-19037152739011-compact2.png?addInfo=Donate%20Hanie&accountName=TRAN%20HONG%20NGOC"
+                        alt="Mã VietQR Techcombank - TRAN HONG NGOC">
+                    <div class="qr-glow"></div>
+                </div>
+
+                <!-- Nhãn hướng dẫn quét mã -->
+                <div class="scan-label">
+                    <i class="fas fa-qrcode"></i> Quét mã bằng ứng dụng Ngân hàng (VietQR / Napas 247)
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="profile-footer">
+            <p>Made with <i class="fas fa-heart heart-beat"></i> for <span>HANIETAYBE</span></p>
+        </footer>
+    </main>
+    <!-- Modal Phóng To QR Code (Popup) -->
+    <div id="qr-modal" class="qr-modal" aria-hidden="true">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close" id="qr-modal-close" title="Đóng">&times;</span>
+            <h3 class="qr-modal-title">Quét Mã QR Donate</h3>
+            <div class="qr-modal-image-wrapper">
+                <img id="qr-modal-img" src="" alt="Mã QR phóng to">
+            </div>
+            <p class="qr-modal-desc">TRAN HONG NGOC - Techcombank</p>
+            <button class="qr-modal-btn" id="qr-modal-copy-btn">Sao chép số tài khoản</button>
+        </div>
+    </div>
+
+    <!-- Modal Hiển Thị Email (Popup) -->
+    <div id="email-modal" class="qr-modal" aria-hidden="true">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close" id="email-modal-close" title="Đóng">&times;</span>
+            <h3 class="qr-modal-title">Liên Hệ Email</h3>
+            
+            <div class="email-display-wrapper">
+                <i class="far fa-envelope-open email-modal-icon"></i>
+                <span id="email-address-text">trhnngoc@gmail.com</span>
+            </div>
+            
+            <p class="qr-modal-desc">Gửi thư hợp tác hoặc trao đổi công việc</p>
+            
+            <div class="email-modal-actions">
+                <button class="qr-modal-btn" id="email-modal-copy-btn">Sao chép Email</button>
+                <a href="mailto:trhnngoc@gmail.com" class="qr-modal-btn email-send-btn" id="email-modal-send-btn">Gửi Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nút Hỗ Trợ Nổi (Floating Assistant Button) -->
+    <button class="h-assist-btn" id="h-assist-btn" aria-label="Mở Hỗ Trợ" title="Trò chuyện với Hanie Assistant">
+        <i class="fas fa-comment-dots h-icon-op"></i>
+        <i class="fas fa-times h-icon-cl" style="display: none;"></i>
+        <span class="h-assist-bdg">1</span>
+    </button>
+
+    <!-- Khung Hỗ Trợ (Assistant Window) -->
+    <div class="h-assist-win" id="h-assist-win" aria-hidden="true">
+        <!-- Tiêu đề -->
+        <div class="h-assist-hdr">
+            <div class="h-hdr-info">
+                <div class="h-avt-wrap">
+                    <img src="ngoc.jpg" alt="Hanie Assistant Avatar" class="h-avt-img">
+                    <span class="status-indicator online"></span>
+                </div>
+                <div class="h-title-cont">
+                    <span class="h-assist-title">Hanie AI 🌸</span>
+                    <span class="h-assist-status">Đang trực tuyến</span>
+                </div>
+            </div>
+            <button class="h-assist-cls" id="h-assist-cls" aria-label="Đóng">&times;</button>
+        </div>
+
+        <!-- Vùng Hiển Thị Tin Nhắn -->
+        <div class="h-assist-msgs" id="h-assist-msgs">
+            <!-- Tin nhắn chào mừng mặc định -->
+            <div class="h-msg-bubble h-ai animate-bubble">
+                <div class="h-msg-content">
+                    Xin chào! Mình là **Hanie AI** 🌸. Mình là trợ lý ảo siêu đáng yêu của chị Hanie. Bạn có muốn hỏi
+                    thăm gì về chị ấy, về Discord team hay cách donate không nè?
+                </div>
+                <span class="h-msg-time">Vừa xong</span>
+            </div>
+        </div>
+
+        <!-- Vùng Nhập Tin Nhắn -->
+        <form class="h-input-area" id="h-assist-frm">
+            <input type="text" id="h-assist-in" placeholder="Nhập câu hỏi của bạn..." autocomplete="off" required>
+            <button type="submit" class="h-assist-snd" id="h-assist-snd" aria-label="Gửi">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Script JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
