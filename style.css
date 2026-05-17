@@ -1,8 +1,5 @@
-/* CSS DESIGN SYSTEM - HANIETAYBE BIO LINK & DONATE PAGE */
-
-/* 1. ĐỊNH NGHĨA BIẾN MÀU SẮC & GIAO DIỆN (THEMING) */
 :root {
-    /* Chế độ Sáng (Mặc định) */
+    
     --bg-gradient: linear-gradient(135deg, #fff5f6 0%, #ffe3e8 50%, #ffd0da 100%);
     --bg-blobs: rgba(255, 182, 193, 0.4);
     
@@ -27,7 +24,6 @@
     --font-secondary: 'Poppins', sans-serif;
 }
 
-/* Chế độ Tối (Dark Mode) */
 [data-theme="dark"] {
     --bg-gradient: linear-gradient(135deg, #181214 0%, #2a1b1f 50%, #1e1114 100%);
     --bg-blobs: rgba(132, 59, 74, 0.3);
@@ -49,7 +45,6 @@
     --discord-shadow: rgba(242, 161, 181, 0.25);
 }
 
-/* 2. CƠ BẢN & RESET */
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +65,6 @@ body {
     transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-/* 2.1 VIDEO LÀM NỀN (BACKGROUND VIDEO) */
 .video-bg-container {
     position: fixed;
     top: 0;
@@ -85,7 +79,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(4px) saturate(1.1); /* Blur nhẹ để làm nổi bật các thẻ thông tin */
+    filter: blur(4px) saturate(1.1); 
     transition: var(--transition-speed);
 }
 
@@ -95,17 +89,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 245, 246, 0.45); /* Nền overlay hồng sữa ở chế độ sáng */
+    background: rgba(255, 245, 246, 0.45); 
     backdrop-filter: blur(1px);
     transition: background var(--transition-speed) ease;
 }
 
 [data-theme="dark"] .video-overlay {
-    background: rgba(18, 12, 14, 0.75); /* Nền overlay đen mờ ở chế độ tối */
+    background: rgba(18, 12, 14, 0.75); 
     backdrop-filter: blur(1px);
 }
 
-/* Các quả bóng màu chạy mượt ở nền */
 body::before, body::after {
     content: '';
     position: absolute;
@@ -136,7 +129,6 @@ body::after {
     100% { transform: translate(50px, 30px) scale(1.1); }
 }
 
-/* 3. NÚT CHUYỂN LIGHT / DARK MODE CỰC ĐẸP */
 .theme-switch-wrapper {
     position: absolute;
     top: 20px;
@@ -220,7 +212,6 @@ input:checked + .slider .icon-moon {
     opacity: 1;
 }
 
-/* 4. CHỨA BỐ CỤC CHÍNH */
 .profile-container {
     width: 100%;
     max-width: 500px;
@@ -230,7 +221,6 @@ input:checked + .slider .icon-moon {
     z-index: 10;
 }
 
-/* 5. PHẦN ĐẦU PROFILE: AVATAR & GIỚI THIỆU */
 .profile-header {
     text-align: center;
     margin-bottom: 25px;
@@ -320,7 +310,6 @@ input:checked + .slider .icon-moon {
     margin-top: 2px;
 }
 
-/* 6. MẠNG XÃ HỘI MẠNH MẼ VÀ TƯƠNG TÁC CAO */
 .social-links-container {
     display: flex;
     justify-content: center;
@@ -360,7 +349,6 @@ input:checked + .slider .icon-moon {
     color: #1a0f12;
 }
 
-/* 7. NÚT DISCORD TEAM NỔI BẬT */
 .cta-section {
     width: 100%;
     margin-bottom: 25px;
@@ -414,7 +402,6 @@ input:checked + .slider .icon-moon {
     75% { transform: rotate(0deg); }
 }
 
-/* Hiệu ứng tia sáng lướt qua nút (Shine) */
 .button-shine {
     position: absolute;
     top: 0;
@@ -436,7 +423,6 @@ input:checked + .slider .icon-moon {
     25%, 100% { left: 150%; }
 }
 
-/* 8. THẺ DONATE & QR CODE CAO CẤP */
 .donate-section {
     width: 100%;
     opacity: 0;
@@ -480,7 +466,6 @@ input:checked + .slider .icon-moon {
     font-family: var(--font-secondary);
 }
 
-/* Hộp số tài khoản cực mượt */
 .account-number-box {
     display: flex;
     align-items: center;
@@ -531,7 +516,6 @@ input:checked + .slider .icon-moon {
     transform: scale(0.98);
 }
 
-/* Tooltip nhấp nháy chỉ dẫn */
 .tooltip {
     position: absolute;
     bottom: -32px;
@@ -567,7 +551,6 @@ input:checked + .slider .icon-moon {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Khu vực QR Code */
 .qr-code-wrapper {
     position: relative;
     width: 200px;
@@ -624,7 +607,6 @@ input:checked + .slider .icon-moon {
     color: var(--accent-color);
 }
 
-/* 9. FOOTER */
 .profile-footer {
     margin-top: 40px;
     text-align: center;
@@ -651,7 +633,6 @@ input:checked + .slider .icon-moon {
     50% { transform: scale(1.15); }
 }
 
-/* 10. THÔNG BÁO TOAST KHI SAO CHÉP */
 .toast {
     position: fixed;
     bottom: 30px;
@@ -679,7 +660,6 @@ input:checked + .slider .icon-moon {
     pointer-events: auto;
 }
 
-/* 12. ANIMATIONS TẢI TRANG */
 @keyframes fade-down {
     0% {
         opacity: 0;
@@ -706,7 +686,6 @@ input:checked + .slider .icon-moon {
     100% { opacity: 1; }
 }
 
-/* 13. TỐI ƯU RESPONSIVE DI ĐỘNG CỰC KỲ TINH TẾ & GỌN GÀNG */
 @media (max-width: 768px) {
     body {
         padding: 20px 12px;
@@ -810,7 +789,6 @@ input:checked + .slider .icon-moon {
     }
 }
 
-/* 14. MODAL PHÓNG TO QR CODE (PREMIUM GLASSMORPHISM) */
 .qr-modal {
     position: fixed;
     top: 0;
@@ -937,12 +915,10 @@ input:checked + .slider .icon-moon {
     color: #1a0f12;
 }
 
-/* Thêm cursor pointer cho QR Code gốc để người dùng biết click được */
 .qr-code-wrapper {
     cursor: pointer;
 }
 
-/* 15. KHUNG HỖ TRỢ TRỢ LÝ ẢO (PREMIUM ASSISTANT UI) */
 .h-assist-btn {
     position: fixed;
     bottom: 30px;
@@ -996,7 +972,6 @@ input:checked + .slider .icon-moon {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Cửa sổ */
 .h-assist-win {
     position: fixed;
     bottom: 95px;
@@ -1025,7 +1000,6 @@ input:checked + .slider .icon-moon {
     transform: translateY(0) scale(1);
 }
 
-/* Header */
 .h-assist-hdr {
     background: linear-gradient(135deg, rgba(242, 161, 181, 0.85) 0%, rgba(242, 161, 181, 0.7) 100%);
     border-bottom: 1px solid var(--card-border);
@@ -1113,7 +1087,6 @@ input:checked + .slider .icon-moon {
     transform: scale(1.15);
 }
 
-/* Tin nhắn hiển thị */
 .h-assist-msgs {
     flex: 1;
     padding: 20px;
@@ -1124,7 +1097,6 @@ input:checked + .slider .icon-moon {
     scroll-behavior: smooth;
 }
 
-/* Custom thanh cuộn */
 .h-assist-msgs::-webkit-scrollbar {
     width: 5px;
 }
@@ -1196,7 +1168,6 @@ input:checked + .slider .icon-moon {
     align-self: flex-end;
 }
 
-/* Typing Indicator */
 .h-dots {
     display: flex;
     gap: 4px;
@@ -1220,7 +1191,6 @@ input:checked + .slider .icon-moon {
     40% { transform: scale(1); }
 }
 
-/* Vùng Nhập liệu */
 .h-input-area {
     padding: 12px 16px;
     background: rgba(255, 255, 255, 0.4);
@@ -1281,7 +1251,6 @@ input:checked + .slider .icon-moon {
     transform: scale(0.95);
 }
 
-/* Animation bong bóng bay lên cho tin nhắn */
 .animate-bubble {
     animation: bubble-up 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
@@ -1297,19 +1266,25 @@ input:checked + .slider .icon-moon {
     }
 }
 
-/* Tối ưu hóa Chat trên màn hình di động đứng */
 @media (max-width: 768px) {
     .h-assist-btn {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
         position: fixed !important;
-        bottom: 30px !important; /* Đẩy lên cao hơn để không bị che bởi thanh điều hướng di động */
-        right: 35px !important;  /* Đẩy dịch sang trái nhiều hơn để nút hiện trọn vẹn */
+        bottom: 30px !important; 
+        right: 35px !important;  
         width: 52px !important;
         height: 52px !important;
         font-size: 20px !important;
         z-index: 999999 !important;
+    }
+
+    body.chat-open .h-assist-btn {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
     
     .h-assist-win {
@@ -1317,7 +1292,7 @@ input:checked + .slider .icon-moon {
         bottom: 0 !important;
         right: 0 !important;
         width: 100vw !important;
-        height: 85vh !important; /* Đặt cứng chiều cao 85% màn hình để không bị lỗi viewport */
+        height: 85vh !important; 
         max-height: 85vh !important;
         border-radius: 28px 28px 0 0 !important;
         border-bottom: none !important;
@@ -1331,7 +1306,6 @@ input:checked + .slider .icon-moon {
     }
 }
 
-/* 16. MODAL HIỂN THỊ EMAIL (PREMIUM GLASSMORPHISM) */
 .email-display-wrapper {
     background: rgba(255, 255, 255, 0.4);
     border: 1px dashed var(--accent-color);
